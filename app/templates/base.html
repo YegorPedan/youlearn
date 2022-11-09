@@ -5,9 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- DELETE AFTER -->
+    <!-- <meta http-equiv="refresh" content="5"> -->
 </head>
 <body>
+
+    <header class="header">
+            <div class="header-inner">
+
+
+                    <div class="logo">ULearn</div>
+
+                    <!-- <div class="categories">
+                        <ul class="categories-list">
+                            <li class="categories-item">
+                                self development
+                            </li>
+                            <li class="categories-item">
+                                self development
+                            </li>
+                            <li class="categories-item">
+                                self development
+                            </li>
+                            <li class="categories-item">
+                                self development
+                            </li>
+                            <li class="categories-item">
+                                self development
+                            </li>
+                        </ul>
+                    </djiv> -->
+
+                    <form action="" class="header-search">
+                        {{ form.csrf_token }}
+
+                        <img class="search-loop" src="../static/imgs/svg/icons8-search.svg" alt="">
+                        {{ form.query(class_='search')}}
+                    </form>
+
+
+
+                    <div class="buttons">
+                        <button class="btn Sign">Log in</button>
+                        <button class="btn Log">Sign up</button>
+                        <button class="languages"><img src="../static/imgs/svg/icons8-гугл-переводчик.svg" alt=""></button>
+                    </div>
+            </div>
+    </header>
 
     <!-- main content -->
     {% block content %}{% endblock %}
