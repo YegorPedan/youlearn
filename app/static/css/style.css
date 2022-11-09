@@ -1,45 +1,17 @@
-/*Обнуление*/
-*{
-	padding: 0;
-	margin: 0;
-	border: 0;
-}
-*,*:before,*:after{
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-:focus,:active{outline: none;}
-a:focus,a:active{outline: none;}
-nav,footer,header,aside{display: block;}
-html,body{
-	height: 100%;
-	width: 100%;
-	font-size: 100%;
-	line-height: 1;
-	font-size: 14px;
-	-ms-text-size-adjust: 100%;
-	-moz-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-}
-input,button,textarea{font-family:inherit;}
-input::-ms-clear{display: none;}
-button{cursor: pointer;}
-button::-moz-focus-inner {padding:0;border:0;}
-a, a:visited{text-decoration: none;}
-a:hover{text-decoration: none;}
-ul li{list-style: none;}
-img{vertical-align: top;}
-h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
-/*--------------------*/
 
+
+.header {
+    background: #333;
+}
 
 .header-inner {
     display: flex;
     align-items: center;
     text-align: center;
     gap: 1rem;
+    padding: 0 10px;
 
+    padding-top: 0.5rem;
 }
 
 .logo {
@@ -54,16 +26,24 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 .header-search {
     display: flex;
+    flex-direction: row-reverse;
     flex: 0 0 80%;
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 99px;
 
     padding-left: 20px;
     padding-right: 10px;
+    background: white;
 }
+
+
 
 .search-loop {
     max-height: 23px;
+}
+
+.search:focus + .search-loop{
+    filter: invert(83%) sepia(6%) saturate(5%) hue-rotate(64deg) brightness(94%) contrast(101%);
 }
 .search {
     width: 100%;
@@ -88,15 +68,30 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 
 .btn {
-    border: 1px solid black;
+    /* border: 1px solid white;
+    color: white;
     background: transparent;
     font-family: serif;
     font-weight: bold;
     height: 40px;
-    padding: 0 20px;    
-}
+    padding: 0 20px;     */
 
-
-.languages{
-    background: transparent;
+    background-image: linear-gradient(to right, #403B4A 0%, #E7E9BB  51%, #403B4A  100%);
+    padding: 10px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    margin-left: 10px;
 }
+         
+.btn:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+         
